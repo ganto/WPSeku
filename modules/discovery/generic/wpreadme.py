@@ -19,8 +19,8 @@
 # along with WPSeku; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-from lib import wphttp
-from lib import wpprint
+from wpseku.lib import wphttp
+from wpseku.lib import wpprint
 
 class wpreadme:
 	check = wphttp.check()

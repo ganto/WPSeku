@@ -21,19 +21,19 @@
 # Add path to seft.target
 
 
-from lib import wpcolor
-from lib import wphttp
-from lib import wpprint
+from wpseku.lib import wpcolor
+from wpseku.lib import wphttp
+from wpseku.lib import wpprint
 import os
 import sys
 import getopt
 import time
 import urlparse
-from modules.discovery import wpall
-from modules.bruteforce import wpxmlrpc
-from modules.attack import wpxss
-from modules.attack import wpsql
-from modules.attack import wplfi
+from wpseku.modules.discovery import wpall
+from wpseku.modules.bruteforce import wpxmlrpc
+from wpseku.modules.attack import wpxss
+from wpseku.modules.attack import wpsql
+from wpseku.modules.attack import wplfi
 
 class WPSeku(object):
 	"""docstring for WPSeku"""
