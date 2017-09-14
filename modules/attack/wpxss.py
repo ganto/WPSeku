@@ -19,10 +19,13 @@
 # along with WPSeku; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-from lib import wphttp 
+from lib import wphttp
 from lib import wpprint
+import inspect
+import os.path
 import re
 import urllib 
+
 
 class wpxss:
 	check = wphttp.check()
@@ -38,7 +41,7 @@ class wpxss:
 		print ""
 		params = dict([x.split("=") for x in self.payload.split("&")])
 		param = {}
-		db = open("data/wpxss.txt","rb")
+		db = open(os.path.join(os.path.dirname(inspect.getsourcefile(self.__class__)),"../../data/wpxss.txt"),"rb")
 		file = [x.split("\n") for x in db]
 		try:
 			for item in params.items():
