@@ -42,7 +42,7 @@ class wpseku(object):
 			if opt in ('-p','--proxy'):self.kwargs['proxy']=arg
 			if opt in ('-c','--cookie'):self.kwargs['cookie']=arg
 			if opt in ('-a','--agent'):self.kwargs['agent']=arg
-			if opt in ('-t','--timeout'):self.kwargs['timeout']=arg
+			if opt in ('-t','--timeout'):self.kwargs['timeout']=int(arg)
 			if opt in ('-R','--redirect'):self.kwargs['redirect']=True
 			if opt in ('-r','--ragent'):self.kwargs['ragent']=True
 			if opt in ('-v','--verbose'):self.kwargs['verbose']=True
