@@ -179,6 +179,53 @@ by Momo Outaadi (m4ll0k)
 
 ```
 
+## Docker container
+
+Docker implementation to containerize the application.
+
+```
+$ git clone https://github.com/m4ll0k/WPSeku.git wpseku
+$ cd wpseku
+$ docker build -t wpseku .
+$ docker run wpseku
+```
+
+Docker run:
+
+```
+home@home-localPC:~/$ docker run wpseku
+----------------------------------------
+ _ _ _ ___ ___ ___| |_ _ _ 
+| | | | . |_ -| -_| '_| | |
+|_____|  _|___|___|_,_|___|
+      |_|             v0.4.0
+
+WPSeku - Wordpress Security Scanner
+by Momo Outaadi (m4ll0k)
+----------------------------------------
+
+Usage: wpseku.py [options]
+
+        -u --url        Target URL (e.g: http://site.com)
+        -b --brute      Bruteforce login via xmlrpc
+        -U --user       Set username for bruteforce, default "admin"
+        -s --scan       Checking wordpress plugin code
+        -p --proxy      Use a proxy, (host:port)
+        -c --cookie     Set HTTP Cookie header value
+        -a --agent      Set HTTP User-agent header value
+        -r --ragent     Use random User-agent header value
+        -R --redirect   Set redirect target URL False
+        -t --timeout    Seconds to wait before timeout connection
+        -w --wordlist   Set wordlist, default "db/wordlist.txt"
+        -v --verbose    Print more informations
+        -h --help       Show this help and exit
+
+Example:
+         wpseku.py --url http://site.com/
+         wpseku.py --url http://site.com --brute --user test
+         wpseku.py --url http://site.com/ --brute --user admin --wordlist wordlist.txt
+```
+
 ## Credits and Contributors
 Original idea and script from WPScan Team (https://wpscan.org/)
 
