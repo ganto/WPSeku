@@ -1,0 +1,6 @@
+.git/
+.gitignore
+.isort.cfg
+LICENSE
+README.md
+Dockerfile
